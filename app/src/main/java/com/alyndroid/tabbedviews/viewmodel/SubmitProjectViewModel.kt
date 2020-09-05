@@ -1,6 +1,7 @@
 package com.alyndroid.tabbedviews.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.alyndroid.tabbedviews.repository.Repository
@@ -20,16 +21,30 @@ class SubmitProjectViewModel(application: Application) : AndroidViewModel(applic
     ) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
+//                Repository().submitProject(
+//                    emailAddress,
+//                    firstName,
+//                    lastName,
+//                    linkToProject
+//                )
                 if (Repository().submitProject(
                         emailAddress,
                         firstName,
                         lastName,
                         linkToProject
-                    ).isExecuted
+                    ).execute().isSuccessful
                 ) {
-                    context?.submissionSuccessful()
+                    launch {
+                        withContext(Dispatchers.Main) {
+                            context?.submissionSuccessful()
+                        }
+                    }
                 } else {
-                    context?.submissionNotSuccessful()
+                    launch {
+                        withContext(Dispatchers.Main) {
+                            context?.submissionNotSuccessful()
+                        }
+                    }
                 }
             }
         }

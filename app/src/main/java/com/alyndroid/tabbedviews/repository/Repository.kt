@@ -4,13 +4,13 @@ import com.alyndroid.tabbedviews.model.RetrofitClient
 
 class Repository {
     private val webService = RetrofitClient.doRetrofitService()
-
+    private val webServiceSubmission = RetrofitClient.doSubmissionService()
     suspend fun getLearningLeaders() = webService.getLearningLeaders()
     suspend fun getSkillIQLeaders() = webService.getSkillIQLeaders()
-    suspend fun submitProject(
+    fun submitProject(
         emailAddress: String,
         name: String,
         lastName: String,
         linkToProject: String
-    ) = webService.submitProject(emailAddress, name, lastName, linkToProject)
+    ) = webServiceSubmission.submitProject(emailAddress, name, lastName, linkToProject)
 }
