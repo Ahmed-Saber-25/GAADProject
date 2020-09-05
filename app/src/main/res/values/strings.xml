@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LeaderBoard</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment 1</string>
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
+    <string name="hello_blank_fragment2">Hello Two</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_link">Project on GITHUB (Link)</string>
+    <string name="submit">Submit</string>
+    <string name="ok_pressed">Yes</string>
+    <string name="message">Are you sure ?</string>
+    <string name="enter_name">This field can\'t be empty</string>
+    <string name="invalid_email">Please,Enter Valid Email Format</string>
+    <string name="invalid_github_url">Please, Enter Valid Github Url</string>
+</resources>
