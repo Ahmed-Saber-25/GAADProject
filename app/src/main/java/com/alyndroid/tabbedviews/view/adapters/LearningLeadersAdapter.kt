@@ -21,15 +21,15 @@ class LearningLeadersAdapter(private val list: List<LearningLeadersRespDao>) :
     override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.iq_leader_name.text = list[position].name
-        holder.itemView.iq_score_and_country_name.text =
+        holder.itemView.leader_name.text = list[position].name
+        holder.itemView.learning_hours_and_country_name.text =
             list[position].hours.toString() + "  Learning Hours , " + list[position].country
 
         Glide.with(holder.itemView.context)
             .load(list[position].badgeUrl)
             .placeholder(R.drawable.top_learner)
             .thumbnail(0.5f)
-            .into(holder.itemView.iq_badge_img)
+            .into(holder.itemView.badge_img)
 
     }
 

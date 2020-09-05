@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.alyndroid.tabbedviews.R
 import com.alyndroid.tabbedviews.model.SkillIQLeadersRespDao
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.learning_leader_card.view.*
+import kotlinx.android.synthetic.main.skill_iq_leader_card.view.*
 
 class SkillIQLeadersAdapter(private val list: List<SkillIQLeadersRespDao>) :
     RecyclerView.Adapter<SkillIQLeadersAdapter.ViewHolder>() {
