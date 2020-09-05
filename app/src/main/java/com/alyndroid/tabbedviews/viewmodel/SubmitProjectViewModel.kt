@@ -21,12 +21,6 @@ class SubmitProjectViewModel(application: Application) : AndroidViewModel(applic
     ) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-//                Repository().submitProject(
-//                    emailAddress,
-//                    firstName,
-//                    lastName,
-//                    linkToProject
-//                )
                 if (Repository().submitProject(
                         emailAddress,
                         firstName,

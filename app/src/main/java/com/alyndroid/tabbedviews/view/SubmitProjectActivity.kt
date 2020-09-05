@@ -115,7 +115,7 @@ class SubmitProjectActivity : AppCompatActivity() {
     }
 
     fun submissionSuccessful() {
-        SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+        SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
             .setTitleText("Submission Successful")
             .setConfirmText("OK")
             .setCustomImage(R.drawable.check_circle)
@@ -123,7 +123,7 @@ class SubmitProjectActivity : AppCompatActivity() {
     }
 
     fun submissionNotSuccessful() {
-        SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+        SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
             .setTitleText("Submission Not Successful")
             .setConfirmText("OK")
             .setCustomImage(R.drawable.report_problem)
